@@ -1,0 +1,35 @@
+GET
+-----
+    /thread
+        payload
+            none
+        response
+            [{
+                id:number,
+                message:string
+            }]
+    /thread/:id
+        payload
+           thread id as route parameter
+        response
+            [{
+                thread_id : number,
+                thread_message : string,
+                comment_id : number,
+                comment_message : string
+            }]
+        
+
+POST
+----
+    /thread
+        payload
+            {message : string}
+        response
+            {success : true}
+    /thread/:id
+        payload
+            route param id
+            {message : string}
+        response
+            {success : true}
